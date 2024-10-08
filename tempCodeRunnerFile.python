@@ -1,0 +1,13 @@
+import cv2 as cv
+from cv2 import aruco
+
+marker_dice = aruco.Dictionary(aruco.DICT_4X4_50 , _markerSize=400)
+
+MARKER_SIZE = 400
+
+for id in range(20):
+    marker_image = aruco.drawDetectedCornersCharuco(image=marker_dice,charucoCorners=None)
+    cv.imshow("test" , marker_image)
+    cv.waitKey(0)
+    break
+
